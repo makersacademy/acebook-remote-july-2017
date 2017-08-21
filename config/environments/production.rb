@@ -62,6 +62,9 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "acebook_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
+  # Once heroku's online and production is working, this needs to be setups (Petra & Mutsa)
+  # config.action_mailer.default_url_options = { host: HEROKU ADDRESS, port: ? }
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
