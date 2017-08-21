@@ -4,11 +4,7 @@ body {
 .posts-index-posts {
   margin: auto;
   width: 50%;
-  border: 2px solid;
   padding: 20px;
-  box-shadow: 10px 10px 5px #888888;
-  background-color: #ffffff;
-  border: 2px solid;
 }
 .posts-index-post {
   display: -webkit-flex;
@@ -17,46 +13,29 @@ body {
   flex-direction: column;
   width: 90%;
   background-color: #ffffff;
-  border: 2px solid;
-  box-shadow: 10px 10px 5px #888888;
+  border:solid 2px  grey;
+  padding: 8px;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
 }
 .posts-index-post-horizontal {
   display: -webkit-flex;
   display: flex;
   width: 100%;
   background-color: #ffffff;
-  margin: auto;
 }
 .posts-index-post-user-icon {
   width: 5%;
-  margin: 10px;
-  padding: 5px;
-  border: 1px solid;
-  // margin: auto;
-  // width: 50px;
-  // height: 50px;
-  // display: inline;
+  margin: 5px;
 }
 
 .posts-index-post-user-name {
+  margin: 5px;
   width: 95%;
-  margin: 10px;
-  padding: 5px;
-  border: 1px solid;
-  // display: inline;
-  // width: 90%;
-  // height: 50px;
-  // float: right;
 }
 
 .posts-index-post-message {
-  margin: 10px;
-  border: 1px solid;
-  padding: 10px;
-  // display: inline;
-  // width: 90%;
-  // height: 50px;
-  // float: right;
+  margin-top: 2px;
+  margin-left: 5px;
 }
