@@ -13,7 +13,7 @@ RSpec.describe CommentsController, type: :controller do
 
     it "creates a comment" do
       post :create, params: { post_id: Post.find_by(message: "hello").id, comment: { text: "Hello, world!" } }
-      expect(Comment.find_by(text: "Hello, world!")).to be
+      expect(Comment.find_by(text: "Hello, world!")).to be_present
     end
   end
 end
