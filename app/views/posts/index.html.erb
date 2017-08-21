@@ -1,6 +1,16 @@
-<% @posts.each do |post| %>
-  <p><%= post.message %></p>
-<% end %>
+<section class='top-bar'>
+<br/><br/>
+</section>
+
+
+<section class='posts'>
+    <% @posts.each do |post| %>
+      <section class='post'>
+        <p>User Name</p>
+        <p><%= post.message %></p>
+      </section>
+    <% end %>
+</section>
 
 <%= link_to new_post_path do %>
   New post
