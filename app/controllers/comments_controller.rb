@@ -1,22 +1,11 @@
 class CommentsController < ApplicationController
-  def index
-    @comments = Comment.all
-  end
-
-  def new
-    @comment = Comment.new
-  end
-
-  def show
-    @comment = Comment.find(params[:id])
-  end
-
   def create
-    @comment = Comment.new(comment_params)
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.create(comment_params)
     if @comment.save
-      redirect_to @comment
+      redirect_to post_path(@post)
     else
-      render 'new'
+      render 'posts/show'
     end
   end
 
