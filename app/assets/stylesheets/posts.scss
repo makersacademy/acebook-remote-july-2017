@@ -1,37 +1,62 @@
 body {
   background-color: #e3e7ed;
 }
-.posts {
+.posts-index-posts {
   margin: auto;
   width: 50%;
   border: 2px solid;
   padding: 20px;
   box-shadow: 10px 10px 5px #888888;
   background-color: #ffffff;
+  border: 2px solid;
 }
-.post {
+.posts-index-post {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  width: 90%;
+  background-color: #ffffff;
+  border: 2px solid;
+  box-shadow: 10px 10px 5px #888888;
   margin: auto;
   margin-bottom: 10px;
-  width: 90%;
-  border: 2px solid;
-  padding: 20px;
-  box-shadow: 10px 10px 5px #888888;
+}
+.posts-index-post-horizontal {
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
   background-color: #ffffff;
+  margin: auto;
 }
-.post-user-icon {
-
-  width: 10%;
-  height: 10%;
-  display: inline;
-  // transform: scale(0.1);
-  // transform-origin: top left;
-  // border: 1px solid;
-}
-
-.post-user-name {
-  display: inline;
-  width: 90%;
-  height: 10%;
-  float: right;
+.posts-index-post-user-icon {
+  width: 5%;
+  margin: 10px;
+  padding: 5px;
   border: 1px solid;
+  // margin: auto;
+  // width: 50px;
+  // height: 50px;
+  // display: inline;
+}
+
+.posts-index-post-user-name {
+  width: 95%;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid;
+  // display: inline;
+  // width: 90%;
+  // height: 50px;
+  // float: right;
+}
+
+.posts-index-post-message {
+  margin: 10px;
+  border: 1px solid;
+  padding: 10px;
+  // display: inline;
+  // width: 90%;
+  // height: 50px;
+  // float: right;
 }
