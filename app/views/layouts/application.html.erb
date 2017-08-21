@@ -13,7 +13,8 @@
       <%= image_tag("acebook_white.png", id: "logo") %>
       <div class="search">
         <form action="/search">
-          <input type="text" name="search" value="search">
+          <input type="text" name="search" value="Search" id="search">
+          <button type="submit" id="search_button"><%= image_tag("icons/search.png", id: "search") %></button>
         </form>
       </div>
       <nav>
@@ -27,6 +28,8 @@
         </ul>
       </nav>
     </header>
+    <section id="main">
     <%= yield %>
+    </section>
   </body>
 </html>
