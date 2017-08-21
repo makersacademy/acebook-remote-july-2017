@@ -18,3 +18,20 @@ body {
   box-shadow: 10px 10px 5px #888888;
   background-color: #ffffff;
 }
+.post-user-icon {
+
+  width: 10%;
+  height: 10%;
+  display: inline;
+  // transform: scale(0.1);
+  // transform-origin: top left;
+  // border: 1px solid;
+}
+
+.post-user-name {
+  display: inline;
+  width: 90%;
+  height: 10%;
+  float: right;
+  border: 1px solid;
+}
