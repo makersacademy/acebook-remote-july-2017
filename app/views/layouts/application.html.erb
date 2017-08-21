@@ -9,6 +9,24 @@
   </head>
 
   <body>
+    <header>
+      <%= image_tag("acebook_white.png", id: "logo") %>
+      <div class="search">
+        <form action="/search">
+          <input type="text" name="search" value="search">
+        </form>
+      </div>
+      <nav>
+        <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">FindFriends</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>

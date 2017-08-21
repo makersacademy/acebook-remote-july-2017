@@ -13,3 +13,50 @@
  *= require_tree .
  *= require_self
  */
+ html {
+   margin: 0;
+ }
+
+ body {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;
+   margin: 0;
+ }
+ header {
+   display: block;
+   height: 40px;
+   background-color: #39579A;
+   position: fixed;
+   width: 100%;
+   margin: 0;
+ }
+ img#logo {
+   height: 24px;
+   padding: 9px;
+   display: inline-block;
+   position: absolute;
+ }
+ nav {
+   float: right;
+   display: inline-block;
+ }
+ nav ul {
+   margin: 0;
+ }
+ nav ul li {
+   display: inline-block;
+   padding: 8px;
+   margin: 3px;
+ }
+ nav ul li a{
+   font-size: 14px;
+   color: #fff;
+   text-decoration: none;
+ }
+ div.search input {
+   display: inline-block;
+   float: left;
+   border-radius: 3px;
+   padding: 5px 10px;
+   border: 1px solid #d0d0d0;
+   margin: 9px 40px;
+ }
