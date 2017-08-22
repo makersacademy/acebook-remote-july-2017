@@ -1,0 +1,41 @@
+body {
+  background-color: #e3e7ed;
+}
+.posts-index-posts {
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+}
+.posts-index-post {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  width: 90%;
+  background-color: #ffffff;
+  border:solid 2px  grey;
+  padding: 8px;
+  margin: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.posts-index-post-horizontal {
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  background-color: #ffffff;
+}
+.posts-index-post-user-icon {
+  width: 5%;
+  margin: 5px;
+}
+
+.posts-index-post-user-name {
+  margin: 5px;
+  width: 95%;
+}
+
+.posts-index-post-message {
+  margin-top: 2px;
+  margin-left: 5px;
+}
