@@ -26,13 +26,13 @@
           </div>
         <% end %>
         <p>
+          <%= form.label :text %><br>
           <%= form.text_area :text %>
         </p>
         <p>
           <%= form.submit %>
         </p>
       <% end %>
+      <%= link_to 'Back', posts_path %>
     </section>
-
-    <p><%= link_to 'Back', posts_path %></p>
 </section>
