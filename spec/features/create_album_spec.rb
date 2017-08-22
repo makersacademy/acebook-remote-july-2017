@@ -11,4 +11,11 @@ feature 'Album' do
     click_button 'Save Album'
     expect(page).to have_content "Test"
   end
+
+  it 'has a description' do
+    visit 'albums/new'
+    fill_in 'Description', with: "Test1"
+    click_button 'Save Album'
+    expect(page).to have_content "Test1"
+  end
 end
