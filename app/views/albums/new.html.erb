@@ -1,3 +1,9 @@
 <%= form_for :album, url: albums_path do |f| %>
-  <p><%= f.submit %></p>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>      
+  <p>
+    <%= f.submit %>
+  </p>
 <% end %>
