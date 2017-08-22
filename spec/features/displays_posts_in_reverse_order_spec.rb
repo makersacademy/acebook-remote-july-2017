@@ -19,7 +19,7 @@ end
 def page_content(posts)
   page_content = ""
   posts.each do |post|
-    page_content += "User Name" + " " + post.message + " " + post.created_at.strftime('%d-%b-%Y %I:%M:%S %p') + " "
+    page_content += "User Name" + " " + post.message + " " + post.created_at.localtime.strftime('%d-%b-%Y %I:%M:%S %p') + " "
   end
   page_content
 end
