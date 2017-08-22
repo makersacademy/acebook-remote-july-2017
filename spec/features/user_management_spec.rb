@@ -10,6 +10,14 @@ def sign_up(email: 'barney@barney.com',
   click_button 'Sign up'
 end
 
+def sign_in(email: 'barney@barney.com',
+            password: '456789')
+  visit '/users/sign_in'
+  fill_in "user_email", with: email
+  fill_in "user_password", with: password
+  click_button 'Log in'
+end
+
 RSpec.feature "Signup", type: :feature do
   scenario "New user can sign up" do
     expect { sign_up }.to change(User, :count).by(1)
@@ -23,5 +31,22 @@ RSpec.feature "Signup", type: :feature do
 
   scenario 'email matches conventions for email' do
     expect { sign_up(email: 'wrong') }.not_to change(User, :count)
+  end
+end
+
+RSpec.feature "Signin", type: :feature do
+  scenario "User can sign in" do
+    sign_up
+    click_link "Logout"
+    sign_in
+    expect(page).to have_content("Signed in successfully.")
+  end
+end
+
+RSpec.feature "Signout", type: :feature do
+  scenario "User can sign out" do
+    sign_up
+    click_link 'Logout'
+    expect(page).to have_content("Signed out successfully.")
   end
 end
