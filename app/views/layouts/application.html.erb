@@ -3,16 +3,55 @@
   <head>
     <title>Acebook</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   </head>
 
   <body>
+    <header>
+
+    <nav class="navbar navbar-fixed-top" >
+      <div class="container-fluid">
+
+        <div class="navbar-logo">
+          <a href="#"><span class="icon-logo"></span></a>
+        </div>
+
+        <form class="navbar-form">
+          <div class="input-group" >
+            <input type="text" class="form-control" placeholder="Search">
+            <div class="input-group-btn">
+              <button class="btn" id="search" type="submit">
+                <span class="icon-search"></span>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <ul class="nav">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Home</span></a></li>
+          <li><a href="#"><span class="icon-friends" id="icon"></span></a></li>
+          <li><a href="#"><span class="icon-messages" id="icon"></span></a></li>
+          <li><a href="#"><span class="icon-notifications" id="icon"></span></a></li>
+          <li><a href="#"><span class="icon-help" id="icon"></span></a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+    </header>
+    <section id="main"
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= render 'devise/menu/registration_items' %>
     <%= render 'devise/menu/login_items' %>
+
     <%= yield %>
+
+    </section>
+
   </body>
 </html>
