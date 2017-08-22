@@ -4,8 +4,7 @@ class AlbumsController < ApplicationController
   end
 
   def create
-    @album = Album.new(album_params)
-    @album.save
+    @album = Album.create(album_params)
     redirect_to @album
   end
 
