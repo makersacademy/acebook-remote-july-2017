@@ -1,5 +1,0 @@
-## Design suggestion
-
-### Before
-
-### After
