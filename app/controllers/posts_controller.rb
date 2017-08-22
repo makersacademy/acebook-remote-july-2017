@@ -1,4 +1,8 @@
 class PostsController < ApplicationController
+  def index
+    @posts = Post.all.reverse
+  end
+
   def new
     @post = Post.new
   end
@@ -8,8 +12,9 @@ class PostsController < ApplicationController
     redirect_to posts_url
   end
 
-  def index
-    @posts = Post.all.reverse
+  def show
+    @post = Post.find(params[:id])
+    @comment = Comment.new
   end
 
   private
