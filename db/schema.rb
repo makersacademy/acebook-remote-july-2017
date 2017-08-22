@@ -12,14 +12,24 @@
 
 ActiveRecord::Schema.define(version: 20170822134203) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
 
   create_table "albums", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+
+  create_table "comments", force: :cascade do |t|
+    t.text "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "post_id"
+    t.index ["post_id"], name: "index_comments_on_post_id"
+
   end
 
   create_table "posts", force: :cascade do |t|
@@ -44,5 +54,7 @@ ActiveRecord::Schema.define(version: 20170822134203) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+  
+  add_foreign_key "comments", "posts"
 
 end
