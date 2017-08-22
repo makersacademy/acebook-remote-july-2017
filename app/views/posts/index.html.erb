@@ -17,8 +17,8 @@
         <p class='posts-index-post-message'>
           <%= post.message %>
         </p>
-        <p>
-          <%= post.created_at.strftime('%d-%b-%Y %I:%M:%S %p') %>
+        <p class="posts-index-post-timestamp">
+          <%= post.created_at.localtime.strftime('%d-%b-%Y %I:%M:%S %p') %>
         </p>
       </section>
     <% end %>
