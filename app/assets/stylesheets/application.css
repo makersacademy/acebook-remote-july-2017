@@ -3,69 +3,53 @@
    margin: 0;
  }
 
- header {
-   display: block;
+ header .navbar {
    height: 40px;
    background-color: #39579A;
-   width: 100%;
-   margin: 0;
+   padding: 0px;
+ }
+ header .navbar .container-fluid {
+   width: 85%;
+   padding: 0;
+   height: 40px;
  }
 
- div.search {
-   display: inline-block;
-   margin: 3px 50px;
+ header .navbar .navbar-logo {
+   line-height: 1;
  }
 
- div.search input#search {
-   border-radius: 2px;
-   padding: 6px 12px;
-   border: 0;
+ header .navbar form.navbar-form {
+  width: 30%;
  }
 
- div.search button#search_button {
-   display: inline-block;
-   height: 24px;
-   width: 24px;
-   border: 0;
-   background: #f6f7f9;
-   border-radius: 2px;
-   background-image: url(app/assets/images/icons/search.png);
+ header .navbar form input.form-control {
+  border: 0;
+  border-radius: 2px;
+  font-weight: 100;
+  height: 25px;
+  font-size: 14px;
  }
 
- img#search {
-   height: 14px;
-   padding: 3px;
-   display: inline-block;
-   position: absolute;
+ header .navbar .btn#search {
+   background-color: #f6f7f9;
+   height: 25px;
+   padding: 3px 16px;
  }
 
- nav {
-   float: right;
-   display: inline-block;
- }
- nav ul {
-   margin: 0;
- }
- nav ul li {
-   display: inline-block;
-   padding: 8px;
-   margin: 3px;
- }
- nav ul li a{
-   font-size: 12px;
+ header .navbar ul.nav {
    color: #fff;
-   text-decoration: none;
  }
 
- nav ul li a#icon {
-   font-size: 20px;
-   color: #16233C;
- }
+ header .navbar ul.nav li a {
+  font-size: 13px;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
 
- section#main {
-   display: block;
-   margin:0;
- }
+header .navbar ul.nav li a:hover {
+  background-color: #365189;
+}
 
 /*Icon Font*/
  @font-face {
@@ -96,27 +80,36 @@
 
  .icon-friends:before {
    content: "\e900";
+   font-size: 20px;
+   color: #16233C;
  }
  .icon-messages:before {
    content: "\e901";
+   font-size: 20px;
+   color: #16233C;
  }
  .icon-notifications:before {
    content: "\e902";
+   font-size: 20px;
+   color: #16233C;
  }
  .icon-help:before {
    content: "\e903";
+   font-size: 20px;
+   color: #16233C;
  }
  .icon-world:before {
    content: "\e904";
+   font-size: 20px;
+   color: #16233C;
  }
+
  .icon-search:before {
    content: "\e905";
-   color: #4e5665;
+   color: #AFAFAF;
  }
  .icon-logo:before {
    content: "\e906";
    color: #fff;
    font-size: 24px;
-   margin: 9px;
-   display: inline-block;
  }
