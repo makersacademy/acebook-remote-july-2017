@@ -1,6 +1,24 @@
-<% @posts.each do |post| %>
-  <p><%= post.message %> <%= link_to 'Comments', post_path(post) %></p>
-<% end %>
+<ul class='posts-index-posts'>
+    <% @posts.each do |post| %>
+      <li class='posts-index-post'>
+        <section class='posts-index-post-horizontal'>
+          <p class='posts-index-post-user-icon'>
+            <%= image_tag("user_icon.png", :alt => "user icon") %>
+          </p>
+          <p class="posts-index-post-user-name">
+            User Name
+          </p>
+        </section>
+        <p class='posts-index-post-message'>
+          <%= post.message %>
+        </p>
+        <p class="posts-index-post-timestamp">
+          <%= post.created_at.localtime.strftime('%d-%b-%Y %I:%M:%S %p') %>
+        </p>
+        <p><%= link_to 'Comments', post_path(post) %></p>
+      </li>
+    <% end %>
+</ul>
 
 <%= link_to new_post_path do %>
   New post
