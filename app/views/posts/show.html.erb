@@ -1,41 +1,38 @@
-<p>
-  <strong>Post:</strong>
-  <%= @post.message %>
-</p>
-<p><strong>Comments:</strong>
-  <ul>
-    <% @post.comments.each do |comment| %>
-    <li><%= comment.text %></li>
-    <% end %>
-  </ul>
-</p>
-
-<p><strong>Add a comment:</strong></p>
-
-<%= form_for([@post, @post.comments.build]) do |form| %>
-
-  <% if @comment.errors.any? %>
-    <div id="error_explanation">
-      <p>
-        <%= pluralize(@comment.errors.count, "error") %> prevented
-        this comment from being saved:
-      </p>
+<section class="show-one-post">
+  <p><strong>Post:</strong></p>
+  <p><%= @post.message %></p>
+    <p><strong>Comments:</strong>
       <ul>
-        <% @comment.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
+        <% @post.comments.each do |comment| %>
+        <li><%= comment.text %></li>
         <% end %>
       </ul>
-    </div>
-  <% end %>
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
+    </p>
+    <section class="comment-form">
+      <p><strong>Add a comment:</strong></p>
 
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+      <%= form_for([@post, @post.comments.build]) do |form| %>
+        <% if @comment.errors.any? %>
+          <div id="error_explanation">
+            <p>
+              <%= pluralize(@comment.errors.count, "error") %> prevented
+              this comment from being saved:
+            </p>
+            <ul>
+              <% @comment.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <p>
+          <%= form.text_area :text %>
+        </p>
+        <p>
+          <%= form.submit %>
+        </p>
+      <% end %>
+    </section>
 
-
-<%= link_to 'Back', posts_path %>
+    <p><%= link_to 'Back', posts_path %></p>
+</section>
