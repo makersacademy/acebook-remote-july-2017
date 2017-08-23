@@ -1,0 +1,6 @@
+<p>Post: <%= @post.message %></p>
+<%= form_for([@post, @post.likes.build]) do |form| %>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

@@ -12,14 +12,15 @@
         <p class='posts-index-post-message'>
           <%= post.message %>
         </p>
-        <p class='posts-index-posts-likes'>
+        <p class='posts-index-post-likes'>
           <%= post.likes.count %>
         </p>
         <p class="posts-index-post-timestamp">
           <%= post.created_at.localtime.strftime('%d-%b-%Y %I:%M:%S %p') %>
         </p>
         <p>
-          <%= link_to 'Like', post_path(post) %>
+          <%= post_likes_path(post)%>
+          <%= link_to 'Like', post_likes_path(post)%>
           <%= link_to 'Comments', post_path(post) %>
         </p>
       </li>
