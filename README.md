@@ -48,7 +48,7 @@ Then start the server at localhost:3000
 * [Trello](https://trello.com/) for tracking and organising workflow
 * [Heroku](https://acebook-remote-july.herokuapp.com/
 ) for hosting our website
-* Vanilla CSS to make it look pretty
+* CSS and Bootstrap to make it look pretty
 * Git for version managing
 
 ## Assets
