@@ -1,24 +1,54 @@
 # AceBook
+by Makers Academy Remote July 2017
 
-**Coaches: Fork this repository to `acebook-cohortname` and customize
-the below**
+### About
+Our international cohort of 12 programmers from 4 countries working in 2 timezones spent a week making this clone of a popular social media website.
 
-[You can find the week outline here.](https://github.com/makersacademy/course/tree/acebook/acebook)
+---
+## Visit our Heroku site
+https://acebook-remote-july.herokuapp.com/
 
-The card wall is here: [[[]]]
+## Or run locally
+View the repository [here](https://github.com/makersacademy/acebook-remote-july-2017) on GitHub
 
-## How to contribute to this project
-See [CONTRIBUTING.md](CONTRIBUTING.md)
-
-## Quickstart
-
-First, clone this repository. Then:
+Clone the repo. Then:
 
 ```bash
 bundle install
 bin/rails db:create
 bin/rails db:migrate
-
-bundle exec rspec # Run the tests to ensure it works
-bin/rails server # Start the server at localhost:3000
 ```
+#### To run the tests
+```bash
+bundle exec rspec
+```
+
+### To view in browser
+```bash
+bin/rails server
+```
+Then start the server at localhost:3000
+
+---
+## Processes
+* XP (Extreme Programming)
+* Agile
+* Pair programming
+* TDD
+* Remote collaboration
+
+---
+## Technologies used
+
+* [Ruby](https://www.ruby-lang.org/en/) as the main back-end language
+* [Rails](http://rubyonrails.org/) for the framework
+* [Travis CI](https://travis-ci.org/)
+* [PostgreSQL](https://www.postgresql.org/) for handling databases
+* [GitHub](https://github.com/makersacademy/acebook-remote-july-2017) for storing our work
+* [Trello](https://trello.com/) for tracking and organising workflow
+* [Heroku](https://acebook-remote-july.herokuapp.com/
+) for hosting our website
+* Vanilla CSS to make it look pretty
+* Git for version managing
+
+## Assets

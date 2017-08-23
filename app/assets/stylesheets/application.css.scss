@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- 
+
  body {
    font-family: system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;
    margin: 0;
@@ -76,11 +76,11 @@ section#main {
 /*Icon Font*/
  @font-face {
    font-family: 'icomoon';
-   src:  url('fonts/icomoon.eot?7jqckw');
-   src:  url('fonts/icomoon.eot?7jqckw#iefix') format('embedded-opentype'),
-     url('fonts/icomoon.ttf?7jqckw') format('truetype'),
-     url('fonts/icomoon.woff?7jqckw') format('woff'),
-     url('fonts/icomoon.svg?7jqckw#icomoon') format('svg');
+   src:  font-url('icomoon.eot?7jqckw');
+   src:  font-url( 'icomoon.eot?7jqckw#iefix' ) format('embedded-opentype'),
+     font-url( 'icomoon.ttf?7jqckw' ) format('truetype'),
+     font-url( 'icomoon.woff?7jqckw' ) format('woff'),
+     font-url( 'icomoon.svg?7jqckw#icomoon' ) format('svg');
    font-weight: normal;
    font-style: normal;
  }
