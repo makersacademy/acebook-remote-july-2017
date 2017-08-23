@@ -1,0 +1,45 @@
+// Place all the styles related to the UserList controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #e3e7ed;
+}
+.users-index-users {
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+}
+.users-index-user {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  width: 90%;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+  padding: 8px;
+  margin: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.users-index-horizontal {
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  background-color: #ffffff;
+}
+.users-index-user-icon {
+  width: 5%;
+  margin: 5px;
+}
+
+.users-index-user-name {
+  margin: 5px;
+  width: 95%;
+}
+
+.users-index-chat-link {
+  margin-top: 2px;
+  margin-left: 10px;
+}
