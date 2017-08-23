@@ -13,7 +13,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    puts "1"
     @post = Post.find(params[:id])
     @comment = Comment.new
   end
