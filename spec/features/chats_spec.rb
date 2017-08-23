@@ -39,4 +39,15 @@ RSpec.feature "Chats" do
     expect(page).to have_content "You are chatting with Barney"
   end
 
+  it "allows a user to send a message within a chat" do
+    visit 'chats/new'
+    fill_in "chat[email]", with: "barney@barney.com"
+    click_button "Save Chat"
+    fill_in "message[body]", with: "Hello Barney"
+    click_button "Create Message"
+    p page
+    expect(page).to have_content "You are chatting with Barney"
+    expect(page).to have_content "Alice: Hello Barney"
+  end
+
 end
