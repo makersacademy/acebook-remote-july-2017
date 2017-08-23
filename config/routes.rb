@@ -12,9 +12,6 @@ Rails.application.routes.draw do
   root 'albums#new'
   resources :albums
   resources :groups
-
-  get 'users/show'
-  root 'users#show'
   resources :users
 
 end
