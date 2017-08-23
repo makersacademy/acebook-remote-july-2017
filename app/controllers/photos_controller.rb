@@ -12,7 +12,7 @@ class PhotosController < ApplicationController
     @photo = Photo.new(photo_params)
 
     if @photo.save
-      redirect_to @photo, notice: 'Photo was successfully uploaded.'
+      redirect_to photos_url, notice: 'Photo was successfully uploaded.'
     else
       render action: 'new'
     end
