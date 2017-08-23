@@ -1,6 +1,5 @@
 class MessagesController < ApplicationController
   before_action do
-    p Chat.find(params[:chat_id])
     @chat = Chat.find(params[:chat_id])
   end
 
@@ -9,7 +8,6 @@ class MessagesController < ApplicationController
   end
 
   def create
-    p params
     @message = @chat.messages.new(message_params)
     if @message.save
       redirect_to chat_messages_path(@chat)
