@@ -1,0 +1,15 @@
+<h1>Chat</h1>
+
+
+<%= form_for :chat, url: chats_path do |f| %>
+  <p>
+    <%= f.label :email %>
+  </p>
+  <p>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
