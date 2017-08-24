@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
 
-
   get 'user_list/index'
-
   devise_for :users  
 
-  get 'welcome/index'
 
+  get 'welcome/index'
   root 'welcome#index'
   resources :posts do
     resources :comments
     resources :likes
   end
+  
+  resources :users
 
   get 'albums/new'
   root 'albums#new'
@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   resources :chats do
     resources :messages
   end
+
 end
