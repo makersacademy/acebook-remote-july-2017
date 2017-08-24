@@ -3,17 +3,17 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field"></br>
+  <div class="field">
     <%= f.text_field :first_name, autofocus: true, placeholder: 'first name' %>
   </div>
 
-  <div class="field"></br>
+  <div class="field">
     <%= f.text_field :last_name, placeholder: 'last name' %>
   </div>
 
-  <div class="field"></br>
+  <div class="field">
     <%= f.email_field :email, placeholder: 'e-mail address'  %>
-  </div></br>
+  </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
@@ -25,7 +25,7 @@
     <i> we need your current password to confirm your changes</i><br />
   </div>
 
-  <div class="field"></br>
+  <div class="field">
     <%= f.password_field :password, autocomplete: "off", placeholder: 'new password' %>
     <i> leave blank if you don't want to change it - </i>
     <% if @minimum_password_length %>
@@ -33,14 +33,14 @@
     <% end %>
   </div>
 
-  <div class="field"></br>
+  <div class="field">
     <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'new password confirmation' %>
   </div>
 
 
-  <div class="actions"></br>
+  <div class="actions">
     <%= f.submit "Update" %>
-  </div></br>
+  </div>
 <% end %>
 
 <h3>Cancel my account</h3>
