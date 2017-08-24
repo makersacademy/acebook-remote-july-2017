@@ -1,21 +1,27 @@
 Rails.application.routes.draw do
 
-  get 'photos/index'
 
-  devise_for :users
+  get 'user_list/index'
+  devise_for :users  
+
+
   get 'welcome/index'
-
   root 'welcome#index'
   resources :posts do
     resources :comments
+    resources :likes
   end
+
+  resources :users
 
   get 'albums/new'
   root 'albums#new'
   resources :albums
   resources :groups
+  resources :chats do
+    resources :messages
+  end
 
-  get 'photos/index'
-  root 'photos#new'
   resources :photos
+
 end
