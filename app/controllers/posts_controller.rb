@@ -15,7 +15,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    p "Show fired"
     @post = Post.find(params[:id])
     @comment = Comment.new
   end

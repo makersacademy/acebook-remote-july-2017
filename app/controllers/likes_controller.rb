@@ -4,10 +4,9 @@ class LikesController < ApplicationController
   end
 
   def create
-    p 'fired'
     @post = Post.find(params[:post_id])
     @post.likes.create
-    # redirect_to posts_url
+    redirect_to posts_url
   end
 
 end

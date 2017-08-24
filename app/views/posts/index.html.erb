@@ -20,7 +20,7 @@
           <span class='posts-index-post-likes' id="like-<%= post.id %>">
             <%= pluralize(post.likes.count, "like") %> |
           </span>
-          <%= link_to 'Like', post_likes_path(post_id: post.id), remote: true, method: :post, class: "like-link", data: { id: post.id, count: post.likes.count + 1 } %>
+          <%= link_to 'Like', post_likes_path(post), remote: true, method: :post, class: "like-link", data: { id: post.id } %> |
           <%= link_to 'Comment', post_path(post) %>
         </p>
       </li>

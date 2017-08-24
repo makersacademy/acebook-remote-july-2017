@@ -3,8 +3,10 @@
 
 $(document).ready(function() {
 
-  $(".like-link").on("click", function() {
-    $("#like-" + this.dataset.id).load(location.href + " #like-" + this.dataset.id);
+  $(function() {
+    $("a[data-remote]").on("ajax:success", function(e, data, status, xhr) {
+      $("#like-" + this.dataset.id).load(location.href + " #like-" + this.dataset.id);
+    });
   });
 
 });
