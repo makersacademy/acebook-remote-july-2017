@@ -33,9 +33,8 @@ RSpec.feature "Friends" do
   end
 
   it " User doesn't have a friend to begin with" do
-    sign_in
-    visit "/users/:user_id/friends"
-    friend = User.create(user_id: @user.id)
+    visit "/friends"
+    # friend = User.create(user_id: current_user)
     expect(page).not_to have_content "Friend"
   end
 end
