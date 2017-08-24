@@ -8,8 +8,6 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  get 'albums/new'
-  root 'albums#new'
   resources :albums
   resources :groups
   resources :users

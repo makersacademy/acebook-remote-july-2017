@@ -44,6 +44,13 @@ ActiveRecord::Schema.define(version: 20170823162720) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "likes", force: :cascade do |t|
+    t.bigint "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_likes_on_post_id"
+  end
+
   create_table "messages", force: :cascade do |t|
     t.text "body"
     t.bigint "chat_id"
@@ -83,4 +90,5 @@ ActiveRecord::Schema.define(version: 20170823162720) do
   end
 
   add_foreign_key "comments", "posts"
+  add_foreign_key "likes", "posts"
 end
