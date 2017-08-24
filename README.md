@@ -23,6 +23,16 @@ bin/rails db:migrate
 bundle exec rspec
 ```
 
+#### To connect the photo hosting service on AWS S3
+* create .env file in your project root
+* populate the following variables with your own S3 credentials:
+```
+BUCKET_NAME=<your_bucket_name>
+ACCESS_KEY_ID=<your_access_key_id>
+SECRET_ACCESS_KEY=<your_secret_access_key>
+AWS_REGION=<your_aws_region>
+```
+
 ### To view in browser
 ```bash
 bin/rails server
@@ -45,6 +55,7 @@ Then start the server at localhost:3000
 * [PostgreSQL](https://www.postgresql.org/) for handling databases
 * [GitHub](https://github.com/makersacademy/acebook-remote-july-2017) for storing our work
 * [Trello](https://trello.com/) for tracking and organising workflow
+* [AWS S3](https://aws.amazon.com/) for photo storage
 * [Heroku](https://acebook-remote-july.herokuapp.com/
 ) for hosting our website
 * CSS and Bootstrap to make it look pretty
@@ -56,6 +67,8 @@ Then start the server at localhost:3000
 * Icomoon.io for creating our own icon font set with SVG icons
 * Bootstrap for styling and layout (please see getbootstrap.com/docs/4.0/layout/grid/)
 * icoconverter.com for favicon generation
+* Paperclip & AWS S3 for photos upload
+* Imagemagick for photo resizing
 
 ### A note on Icomoon and the custom font icon set
 * We followed this tutorial: http://mediatemple.net/blog/tips/creating-implementing-icon-font-tutorial/
