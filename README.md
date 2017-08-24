@@ -39,7 +39,6 @@ Then start the server at localhost:3000
 
 ---
 ## Technologies used
-
 * [Ruby](https://www.ruby-lang.org/en/) as the main back-end language
 * [Rails](http://rubyonrails.org/) for the framework
 * [Travis CI](https://travis-ci.org/)
@@ -48,7 +47,17 @@ Then start the server at localhost:3000
 * [Trello](https://trello.com/) for tracking and organising workflow
 * [Heroku](https://acebook-remote-july.herokuapp.com/
 ) for hosting our website
-* Vanilla CSS to make it look pretty
+* CSS and Bootstrap to make it look pretty
 * Git for version managing
 
 ## Assets
+
+## Styling and Imagery
+* Icomoon.io for creating our own icon font set with SVG icons
+* Bootstrap for styling and layout (please see getbootstrap.com/docs/4.0/layout/grid/)
+* icoconverter.com for favicon generation
+
+### A note on Icomoon and the custom font icon set
+* We followed this tutorial: http://mediatemple.net/blog/tips/creating-implementing-icon-font-tutorial/
+* Importantly, the fonts folder needs to be in Assets, application.css needs to be renamed to application.css.scss and each @font-face src url needs to be called as a font-url. Without these changes, the icons will not render on Heroku.
+* To render icons, simply use <span class="icon-name" id="icon"></span>, where name is the name of the icon (the list will be in application.css.scss)

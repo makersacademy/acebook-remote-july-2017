@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Comments", type: :feature do
   scenario "Can submit comments on a post" do
+    sign_up
     make_a_post
     click_link "Comment"
     fill_in "Text", with: "This post sucks"
@@ -10,6 +11,7 @@ RSpec.feature "Comments", type: :feature do
   end
 
   scenario "Errors are displayed when a comment does not validate" do
+    sign_up
     make_a_post
     click_link "Comment"
     click_button "Create"
