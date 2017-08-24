@@ -1,0 +1,9 @@
+// Place all the styles related to the Chats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.new-chat-form input {
+  -webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  border: none;
+  background: #e3e7ed;
+}
