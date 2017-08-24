@@ -1,9 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-<<<<<<< HEAD
-=======
-  
->>>>>>> posts
+
   def index
     @posts = Post.all.reverse
   end
