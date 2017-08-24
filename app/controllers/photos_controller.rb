@@ -8,7 +8,6 @@ class PhotosController < ApplicationController
   end
 
   def create
-    p params[:photo]
     @photo = Photo.new(photo_params)
 
     if @photo.save

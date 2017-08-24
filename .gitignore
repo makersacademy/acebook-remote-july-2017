@@ -24,3 +24,5 @@
 **/.DS_Store
 
 .env
+
+public/system/photos/images
