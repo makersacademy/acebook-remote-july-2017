@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'user_list/index'
 
-  devise_for :users  
+  devise_for :users
 
   get 'welcome/index'
 
@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   root 'albums#new'
   resources :albums
   resources :groups
+  resources :friends
   resources :chats do
     resources :messages
   end
