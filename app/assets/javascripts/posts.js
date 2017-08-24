@@ -4,7 +4,7 @@
 $(document).ready(function() {
 
   $(".like-link").on("click", function() {
-    $("#like-" + this.dataset.id).text(this.dataset.count);
+    $("#like-" + this.dataset.id).load(location.href + " #like-" + this.dataset.id);
   });
 
 });
