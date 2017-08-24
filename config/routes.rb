@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'user_list/index'
 
-  devise_for :users  
+  devise_for :users
 
   get 'welcome/index'
 
@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     resources :comments
     resources :likes
   end
+
+
 
   get 'albums/new'
   root 'albums#new'
