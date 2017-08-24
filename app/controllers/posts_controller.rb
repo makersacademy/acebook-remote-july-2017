@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-
+  before_action :authenticate_user!
   def index
     @posts = Post.all.reverse
   end
@@ -9,8 +9,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    user = User.find(current_user.id)
-    user.posts.create(post_params)
+    @post = Post.create(post_params)
     redirect_to posts_url
   end
 
