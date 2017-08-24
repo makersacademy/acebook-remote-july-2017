@@ -43,4 +43,5 @@ RSpec.feature "Friends" do
     visit "/friends"
     expect(page).to have_content "Friend 1"
   end
+
 end
