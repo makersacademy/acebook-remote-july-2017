@@ -4,4 +4,8 @@ class FriendsController < ApplicationController
   def index
   end
 
+  def create
+    # @friend = User.create(friend)
+  end
+
 end

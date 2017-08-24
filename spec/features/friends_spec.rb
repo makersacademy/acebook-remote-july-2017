@@ -32,9 +32,15 @@ RSpec.feature "Friends" do
                 password_confirmation: '456789')
   end
 
-  it " User doesn't have a friend to begin with" do
+  it "User has no friends to begin with" do
     visit "/friends"
-    # friend = User.create(user_id: current_user)
-    expect(page).not_to have_content "Friend"
+    expect(page).not_to have_content "Friends"
+  end
+
+  it 'User has one friend' do
+    visit "/user_list/index"
+    click_button "Add friend"
+    visit "/friends"
+    expect(page).to have_content "Friend 1"
   end
 end
