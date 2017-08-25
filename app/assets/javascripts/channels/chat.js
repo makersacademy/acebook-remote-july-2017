@@ -8,14 +8,10 @@ App.chat = App.cable.subscriptions.create("ChatChannel", {
   },
 
   received: function(data) {
-    console.log(data)
-    console.log("Hello I am working")
-    alert(data['message']);
-    // Called when there's incoming data on the websocket for this channel
+    $('#chat-messages-list').append(data['message']);
   },
 
   speak: function(message) {
-    return this.perform('speak', {message: message});
+    return this.perform('speak', message);
   }
-
 });
