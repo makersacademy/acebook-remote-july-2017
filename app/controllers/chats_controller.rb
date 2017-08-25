@@ -1,5 +1,10 @@
 class ChatsController < ApplicationController
   before_action :authenticate_user!
+  def index
+    @chats = Chat.all
+    @users = User.all
+  end
+
   def new
   end
 
