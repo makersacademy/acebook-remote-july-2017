@@ -3,7 +3,12 @@ require 'rails_helper'
 RSpec.describe CommentsController, type: :controller do
   describe "POST /" do
     before do
-      Post.create(message: "hello")
+      user = User.create(first_name: 'Barney',
+                  last_name: 'Test',
+                  email: 'barney@barney.com',
+                  password: '456789',
+                  password_confirmation: '456789')
+      Post.create(message: "hello", user_id: user.id)
     end
 
     it "responds with 302" do
