@@ -17,10 +17,10 @@
           <%= post.created_at.localtime.strftime('%d-%b-%Y %I:%M:%S %p') %>
         </p>
         <p>
-          <span class='posts-index-post-likes'>
+          <span class='posts-index-post-likes' id="like-<%= post.id %>">
             <%= pluralize(post.likes.count, "like") %> |
           </span>
-          <%= link_to 'Like', post_likes_path(post), method: :post %> |
+          <%= link_to 'Like', post_likes_path(post), remote: true, method: :post, class: "like-link", data: { id: post.id } %> |
           <%= link_to 'Comment', post_path(post) %>
         </p>
       </li>

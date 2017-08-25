@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
+
   def index
     @posts = Post.all.reverse
   end
@@ -16,6 +17,10 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comment = Comment.new
+  end
+
+  def destroy
+    Post.find(params[:id]).delete
   end
 
   private

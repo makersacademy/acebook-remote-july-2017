@@ -4,6 +4,7 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+
     <%= f.text_field :first_name, autofocus: true, placeholder: 'first name' %>
   </div>
 
@@ -13,6 +14,7 @@
 
   <div class="field">
     <%= f.email_field :email, placeholder: 'e-mail address'  %>
+
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -26,17 +28,19 @@
   </div>
 
   <div class="field">
+
     <%= f.password_field :password, autocomplete: "off", placeholder: 'new password' %>
     <i> leave blank if you don't want to change it - </i>
+
     <% if @minimum_password_length %>
       <em><%= @minimum_password_length %> characters minimum</em>
     <% end %>
   </div>
 
   <div class="field">
+
     <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'new password confirmation' %>
   </div>
-
 
   <div class="actions">
     <%= f.submit "Update" %>

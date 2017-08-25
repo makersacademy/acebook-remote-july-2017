@@ -21,6 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'devise'
+
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk', '~> 2.3'
 
