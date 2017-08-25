@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
+  mount ActionCable.server => '/cable'
+
   get 'user_list/index'
 
-  devise_for :users  
+  devise_for :users
 
   get 'welcome/index'
 
