@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.feature "Groups", type: :feature do
+  before do
+    sign_up
+  end
   scenario "Can create a group" do
     visit "/groups/new"
     fill_in "Title", with: "Groupy name"
