@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   width: 55%;
   background-color: #ffffff;
-  padding: 8px;
+  padding: 12px;
   border: 1px solid #DFE0E4;
   margin: auto;
   margin-bottom: 10px;
@@ -37,6 +37,8 @@ body {
 .users-index-user-name {
   margin: 5px;
   width: 95%;
+  font-weight: 600;
+  color: #3B5A98;
 }
 
 .users-index-chat-link {
