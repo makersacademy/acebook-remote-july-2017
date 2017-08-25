@@ -1,6 +1,12 @@
 body {
   background-color: #e3e7ed;
 }
+
+p.posts-index-likes-comments {
+  margin-bottom: 0;
+  color: #C2C2C2;
+}
+
 .posts-index-posts {
   margin: auto;
   width: 85%;
@@ -13,7 +19,7 @@ body {
   flex-direction: column;
   width: 55%;
   background-color: #ffffff;
-  padding: 8px;
+  padding: 12px;
   border: 1px solid #DFE0E4;
   margin: auto;
   margin-bottom: 10px;

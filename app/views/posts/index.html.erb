@@ -1,3 +1,7 @@
+<%= link_to new_post_path do %>
+  New post
+<% end %>
+
 <ul class='posts-index-posts'>
     <% @posts.each do |post| %>
       <li class='posts-index-post'>
@@ -16,17 +20,13 @@
         <p class="posts-index-post-timestamp">
           <%= post.created_at.localtime.strftime('%d-%b-%Y %I:%M:%S %p') %>
         </p>
-        <p>
+        <p class="posts-index-likes-comments">
           <span class='posts-index-post-likes' id="like-<%= post.id %>">
-            <%= pluralize(post.likes.count, "like") %> |
-          </span>
+            <%= pluralize(post.likes.count, "like") %>
+          </span>|
           <%= link_to 'Like', post_likes_path(post), remote: true, method: :post, class: "like-link", data: { id: post.id } %> |
           <%= link_to 'Comment', post_path(post) %>
         </p>
       </li>
     <% end %>
 </ul>
-
-<%= link_to new_post_path do %>
-  New post
-<% end %>
