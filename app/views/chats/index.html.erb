@@ -1,3 +1,12 @@
+<p><strong>Inbox</strong></p>
+<ul class='user-current-chats'>
+  <% @chats.each do |chat| %>
+    <% if chat.sender_id == current_user.id || chat.recipient_id == current_user.id %>
+      <li><%= chat.sender.first_name %> and <%= chat.recipient.first_name %></li>
+    <% end %>
+  <% end %>
+</ul>
+
 <ul class='users-index-users'>
     <% @users.each do |user| %>
       <li class='users-index-user'>
