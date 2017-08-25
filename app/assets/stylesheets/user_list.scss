@@ -7,7 +7,7 @@ body {
 }
 .users-index-users {
   margin: auto;
-  width: 50%;
+  width: 85%;
   padding: 20px;
 }
 .users-index-user {
@@ -15,13 +15,13 @@ body {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  width: 90%;
+  width: 55%;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.25);
   padding: 8px;
+  border: 1px solid #DFE0E4;
   margin: auto;
-  margin-bottom: 15px;
-  border-radius: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
 }
 .users-index-horizontal {
   display: -webkit-flex;

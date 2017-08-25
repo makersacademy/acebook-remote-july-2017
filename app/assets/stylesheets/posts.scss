@@ -3,7 +3,7 @@ body {
 }
 .posts-index-posts {
   margin: auto;
-  width: 50%;
+  width: 85%;
   padding: 20px;
 }
 .posts-index-post {
@@ -11,13 +11,13 @@ body {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  width: 90%;
+  width: 55%;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.25);
   padding: 8px;
+  border: 1px solid #DFE0E4;
   margin: auto;
-  margin-bottom: 15px;
-  border-radius: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
 }
 .posts-index-post-horizontal {
   display: -webkit-flex;
@@ -31,21 +31,26 @@ body {
 }
 
 .posts-index-post-user-name {
-  margin: 5px;
+  margin: 8px;
   width: 95%;
+  font-weight: 600;
+  color: #3B5A98;
 }
 
 .posts-index-post-message {
-  margin-top: 2px;
-  margin-left: 5px;
+  margin: 10px 5px;
 }
 
 .posts-index-post-likes {
   margin-top: 2px;
   margin-left: 5px;
+  font-size: 14px;
+  color: #3B5A98;
+  font-weight: 600;
 }
 
 .posts-index-post-timestamp {
-  margin-top: 2px;
-  margin-left: 5px;
+  margin: 2px 5px 5px 5px;
+  font-size: 12px;
+  color: #C2C2C2;
 }
