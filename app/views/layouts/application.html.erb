@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Acebook</title>
+    <%= action_cable_meta_tag %>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
@@ -9,13 +10,13 @@
   </head>
 
   <body>
-    <header>
+    <header class="sticky-top fixed-top">
 
-    <nav class="navbar navbar-fixed-top" >
+    <nav class="navbar" >
       <div class="container-fluid">
 
         <div class="navbar-logo">
-          <a href="#"><span class="icon-logo"></span></a>
+          <a href="/"><span class="icon-logo"></span></a>
         </div>
 
         <form class="navbar-form">
@@ -31,7 +32,7 @@
 
         <ul class="nav">
           <li><a href="#">Profile</a></li>
-          <li><a href="#">Home</span></a></li>
+          <li><a href="/">Home</span></a></li>
           <li><a href="#"><span class="icon-friends" id="icon"></span></a></li>
           <li><a href="#"><span class="icon-messages" id="icon"></span></a></li>
           <li><a href="#"><span class="icon-notifications" id="icon"></span></a></li>

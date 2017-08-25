@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount ActionCable.server => '/cable'
 
   get 'user_list/index'
 
@@ -7,7 +8,8 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
-  root 'welcome#index'
+  root 'posts#index'
+
   resources :posts do
     resources :comments
     resources :likes

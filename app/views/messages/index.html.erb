@@ -1,20 +1,29 @@
-<h1>You are chatting with <%= @chat.recipient.first_name %></h1>
+<section class="chat-names">
+  <p><strong>You are chatting with <%= @chat.recipient.first_name %></strong></p>
+</section>
 
-<ul>
+<section class="chat-messages">
+<ul id="chat-messages-list">
   <% @messages.each do |message| %>
     <li><%= message.user.first_name %>: <%= message.body %></li>
   <% end %>
 </ul>
+</section>
 
-<%= form_for([@chat, @chat.messages.build]) do |form| %>
-  <p>
-    <%= form.label :message %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.text_field :user_id, value: current_user.id, type: "hidden" %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<section class="chat-message-form">
+    <%= form_for([@chat, @chat.messages.build]) do |form| %>
+      <p>
+        <%= form.label :message %><br>
+        <%= form.text_area :body, :required => true %>
+      </p>
+      <p>
+        <%= form.text_field :user_id, value: current_user.id, type: "hidden" %>
+      </p>
+      <p>
+        <%= form.text_field :chat_id, value: @chat.id, type: "hidden" %>
+      </p>
+      <p>
+        <%= form.submit "Send message" %>
+      </p>
+    <% end %>
+</section>

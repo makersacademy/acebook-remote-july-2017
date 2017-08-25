@@ -23,6 +23,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'jquery-rails'
 
+gem 'jquery-rails'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production

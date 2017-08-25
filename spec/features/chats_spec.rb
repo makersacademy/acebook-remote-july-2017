@@ -1,27 +1,4 @@
 RSpec.feature "Chats" do
-
-  def sign_up(first_name: 'Barney',
-              last_name: 'Test',
-              email: 'barney@barney.com',
-              password: '456789',
-              password_confirmation: '456789')
-    visit '/users/sign_up'
-    fill_in 'user_first_name', with: first_name
-    fill_in 'user_last_name', with: last_name
-    fill_in 'user_email' , with: email
-    fill_in 'user_password', with: password
-    fill_in 'user_password_confirmation', with: password_confirmation
-    click_button 'Sign up'
-  end
-
-  def sign_in(email: 'barney@barney.com',
-              password: '456789')
-    visit '/users/sign_in'
-    fill_in "user_email", with: email
-    fill_in "user_password", with: password
-    click_button 'Log in'
-  end
-
   before do
     sign_up
     click_link 'Logout'
@@ -33,21 +10,25 @@ RSpec.feature "Chats" do
   end
 
   it "allows a user to create a new chat" do
-    visit 'chats/new'
-    fill_in "chat[email]", with: "barney@barney.com"
-    click_button "Save Chat"
+    create_a_chat
     expect(page).to have_content "You are chatting with Barney"
   end
 
   it "allows a user to send a message within a chat" do
-    visit 'chats/new'
-    fill_in "chat[email]", with: "barney@barney.com"
-    click_button "Save Chat"
-    fill_in "message[body]", with: "Hello Barney"
-    click_button "Create Message"
-    p page
-    expect(page).to have_content "You are chatting with Barney"
+    create_a_chat
+    send_a_message
     expect(page).to have_content "Alice: Hello Barney"
+  end
+
+  it "allows the other user to respond" do
+    create_a_chat
+    send_a_message
+    click_link 'Logout'
+    sign_in
+    create_a_chat(email: "alice@alice.com")
+    send_a_message(message: "Hello Alice!")
+    expect(page).to have_content "Alice: Hello Barney"
+    expect(page).to have_content "Barney: Hello Alice!"
   end
 
 end
