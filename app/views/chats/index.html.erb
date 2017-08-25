@@ -1,3 +1,4 @@
+<p><strong>Inbox</strong></p>
 <ul class='users-index-users'>
     <% @users.each do |user| %>
       <li class='users-index-user'>
@@ -7,10 +8,15 @@
           </p>
           <p class="users-index-user-name">
             <%= user.first_name + " " + user.last_name %>
+            <%= form_for :chat, url: chats_path do |f| %>
+              <p>
+                <%= f.text_field :user_id, value: user.id, type: "hidden" %>
+              </p>
+              <p>
+                <%= f.submit "Begin chatting" %>
+              </p>
+            <% end %>
           </p>
         </section>
-        <p class='users-index-chat-link'>
-          <p><%= link_to 'Chat' %></p>
-        </p>
     <% end %>
 </ul>

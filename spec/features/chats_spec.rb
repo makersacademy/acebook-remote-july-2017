@@ -25,7 +25,7 @@ RSpec.feature "Chats" do
     send_a_message
     click_link 'Logout'
     sign_in
-    create_a_chat(email: "alice@alice.com")
+    create_a_chat
     send_a_message(message: "Hello Alice!")
     expect(page).to have_content "Alice: Hello Barney"
     expect(page).to have_content "Barney: Hello Alice!"
