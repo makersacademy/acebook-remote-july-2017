@@ -7,7 +7,7 @@
             <%= image_tag("user_icon.png", :alt => "user icon") %>
           </p>
           <p class="users-index-user-name">
-            <%= user.first_name + " " + user.last_name %>
+            <%= user.first_name %> <%= user.last_name %>
             <%= form_for :chat, url: chats_path do |f| %>
               <p>
                 <%= f.text_field :user_id, value: user.id, type: "hidden" %>
