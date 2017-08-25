@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
+
   mount ActionCable.server => '/cable'
 
   get 'user_list/index'

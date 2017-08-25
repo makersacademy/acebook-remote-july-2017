@@ -51,7 +51,7 @@ RSpec.feature "Signout", type: :feature do
   scenario "User can sign out" do
     sign_up
     click_link 'Logout'
-    expect(page).to have_content("You need to sign in or sign up before continuing.")
+    expect(page).to have_content("Login You need to sign in or sign up before continuing")
   end
 end
 

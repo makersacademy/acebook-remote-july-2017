@@ -31,7 +31,11 @@
         </form>
 
         <ul class="nav">
-          <li><a href="#">Profile</a></li>
+          <li>
+            <% if current_user %>
+              <%= link_to 'Profile', user_path(current_user), class: 'profile_link' %>
+            <% end %>
+          </li>
           <li><a href="/">Home</span></a></li>
           <li><a href="#"><span class="icon-friends" id="icon"></span></a></li>
           <li><a href="#"><span class="icon-messages" id="icon"></span></a></li>
