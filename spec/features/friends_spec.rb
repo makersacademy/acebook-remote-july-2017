@@ -34,14 +34,14 @@ RSpec.feature "Friends" do
 
   it "User has no friends to begin with" do
     visit "/friends"
-    expect(page).not_to have_content "Friends"
+    expect(page).not_to have_content "Friend"
   end
 
   it 'User has one friend' do
     visit "/user_list/index"
     click_button "Add friend"
     visit "/friends"
-    expect(page).to have_content "Friend 1"
+    expect(page).to have_content "Friend"
   end
 
 end
