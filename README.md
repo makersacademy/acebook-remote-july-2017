@@ -24,6 +24,7 @@ bundle exec rspec
 ```
 
 #### To connect the photo hosting service on AWS S3
+* install imagemagick (for Mac run `brew install imagemagick` for Windows use the [binary release](http://www.imagemagick.org/script/binary-releases.php#windows)
 * create .env file in your project root
 * populate the following variables with your own S3 credentials:
 ```
