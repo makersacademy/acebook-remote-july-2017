@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   before_action do
     @chat = Chat.find(params[:chat_id])
+    security_check
   end
 
   def index
@@ -17,6 +18,12 @@ class MessagesController < ApplicationController
   private
   def message_params
     params.require(:message).permit(:body, :user_id)
+  end
+
+  def security_check
+    unless current_user.id == @chat.sender_id || current_user.id == @chat.recipient_id
+      redirect_to posts_path
+    end
   end
 
 end
