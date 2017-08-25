@@ -6,7 +6,7 @@
             <%= image_tag("user_icon.png", :alt => "user icon") %>
           </p>
           <p class="posts-index-post-user-name">
-            User Name
+            <%= post.user.first_name + " " + post.user.last_name %>
           </p>
         </section>
         <p class='posts-index-post-message'>
@@ -20,7 +20,8 @@
           <span class='posts-index-post-likes' id="like-<%= post.id %>">
             <%= pluralize(post.likes.count, "like") %> |
           </span>
-          <%= link_to 'Like', post_likes_path(post), remote: true, method: :post, class: "like-link", data: { id: post.id } %> |
+          <% already_liked = post.likes.any?{ |like| like.user_id == current_user.id } %>
+          <%= link_to_unless already_liked, 'Like', post_likes_path(post), remote: true, method: :post, class: "like-link", data: { id: post.id } %> |
           <%= link_to 'Comment', post_path(post) %>
         </p>
       </li>
