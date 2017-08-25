@@ -13,7 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20170823162720) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,7 +51,7 @@ ActiveRecord::Schema.define(version: 20170823162720) do
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_likes_on_post_id"
   end
-  
+
   create_table "messages", force: :cascade do |t|
     t.text "body"
     t.bigint "chat_id"
