@@ -1,3 +1,15 @@
 // Place all the styles related to the Albums controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.album-description {
+  margin-top: 2em;
+  padding: 1em;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+  border-radius: 10px;
+}
+.album-description ul {
+  list-style: none;
+  padding: 0;
+  font-size: small;
+}

@@ -1,2 +1,8 @@
 <h1><%= @album.title %></h1>
-<h1><%= @album.description %></h1>
+<section class="album-description">
+  <p><em><%= @album.description %></em></p>
+  <ul>
+    <li>Created on <%= @album.created_at.localtime.strftime('%d-%m-%Y') %></li>
+    <li>Last updated on <%= @album.updated_at.localtime.strftime('%d-%m-%Y') %></li>
+  </ul>
+</section>
