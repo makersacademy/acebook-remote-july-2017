@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
+
   mount ActionCable.server => '/cable'
 
   get 'user_list/index'
@@ -14,15 +16,14 @@ Rails.application.routes.draw do
     resources :comments
     resources :likes
   end
-  
+
   resources :users
 
-  get 'albums/new'
-  root 'albums#new'
   
+
   resources :albums
   resources :groups
-  
+
   resources :chats do
     resources :messages
   end

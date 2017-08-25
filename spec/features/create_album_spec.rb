@@ -1,4 +1,8 @@
 feature 'Album' do
+  before do
+    sign_up
+  end
+
   it 'can create an album' do
     visit 'albums/new'
     click_button 'Save Album'

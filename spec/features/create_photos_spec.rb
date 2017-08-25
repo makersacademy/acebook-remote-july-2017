@@ -1,4 +1,8 @@
 feature 'Photo' do
+  before do
+    sign_up
+  end
+
   it 'can create a photo' do
     visit 'photos/new'
     attach_file('photo_image', Rails.root + 'spec/files/test.png', visible: false)
