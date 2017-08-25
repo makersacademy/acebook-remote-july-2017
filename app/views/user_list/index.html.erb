@@ -1,0 +1,16 @@
+<ul class='users-index-users'>
+    <% @users.each do |user| %>
+      <li class='users-index-user'>
+        <section class='users-index-horizontal'>
+          <p class='users-index-user-icon'>
+            <%= image_tag("user_icon.png", :alt => "user icon") %>
+          </p>
+          <p class="users-index-user-name">
+            <%= user.first_name + " " + user.last_name %>
+          </p>
+        </section>
+        <p class='users-index-chat-link'>
+          <p><%= link_to 'Chat' %></p>
+        </p>
+    <% end %>
+</ul>
