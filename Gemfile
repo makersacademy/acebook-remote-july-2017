@@ -22,6 +22,9 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'devise'
 
+gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'aws-sdk', '~> 2.3'
+
 gem 'jquery-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -39,6 +42,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
+  gem 'dotenv-rails'
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.5'
 end

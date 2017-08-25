@@ -1,0 +1,10 @@
+<ul>
+  <% @photos.each do |photo| %>
+    <%= image_tag photo.image.url (:medium)%> <br>
+    <% end %>
+
+</ul>
+
+<%= link_to new_photo_path do %>
+  Upload New Photo
+<% end %>

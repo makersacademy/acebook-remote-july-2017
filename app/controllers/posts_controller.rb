@@ -19,6 +19,10 @@ class PostsController < ApplicationController
     @comment = Comment.new
   end
 
+  def destroy
+    Post.find(params[:id]).delete
+  end
+
   private
 
   def post_params
