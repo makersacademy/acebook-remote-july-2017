@@ -1,3 +1,7 @@
+<%= link_to new_post_path do %>
+  New post
+<% end %>
+
 <ul class='posts-index-posts'>
     <% @posts.each do |post| %>
       <li class='posts-index-post'>
@@ -26,7 +30,3 @@
       </li>
     <% end %>
 </ul>
-
-<%= link_to new_post_path do %>
-  New post
-<% end %>

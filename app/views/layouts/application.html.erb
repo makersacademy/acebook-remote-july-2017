@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <header class="sticky-top fixed-top">
+    <header class="fixed-top">
 
     <nav class="navbar" >
       <div class="container-fluid">
@@ -33,10 +33,10 @@
         <ul class="nav">
           <li><a href="#">Profile</a></li>
           <li><a href="/">Home</span></a></li>
-          <li><a href="#"><span class="icon-friends" id="icon"></span></a></li>
+          <li><a href="/user_list/index"><span class="icon-friends" id="icon"></span></a></li>
           <li><a href="/chats"><span class="icon-messages" id="icon"></span></a></li>
           <li><a href="#"><span class="icon-notifications" id="icon"></span></a></li>
-          <div class="dropdown show">
+          <div class="dropdown">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="icon-help" id="icon"></span>
             </a>
@@ -51,10 +51,10 @@
 
 
     </header>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
     <section id="main">
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
     <%= yield %>
 
