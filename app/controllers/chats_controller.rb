@@ -5,12 +5,9 @@ class ChatsController < ApplicationController
     @users = User.all
   end
 
-  def new
-  end
-
   def create
     @sender = current_user
-    @recipient = User.find_by(email: chat_params[:email])
+    @recipient = User.find(chat_params[:user_id])
     if Chat.between(@sender.id, @recipient.id).present?
       @chat = Chat.between(@sender.id, @recipient.id).first
     else
@@ -21,6 +18,6 @@ class ChatsController < ApplicationController
 
   private
   def chat_params
-    params.require(:chat).permit(:email)
+    params.require(:chat).permit(:user_id)
   end
 end

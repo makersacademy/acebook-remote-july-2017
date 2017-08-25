@@ -1,8 +1,7 @@
 module ChatHelpers
-  def create_a_chat(email: "barney@barney.com")
-    visit 'chats/new'
-    fill_in "chat[email]", with: email
-    click_button "Start a chat"
+  def create_a_chat
+    visit 'chats'
+    page.first(:button, "Begin chatting").click
   end
 
   def send_a_message(message: "Hello Barney")
