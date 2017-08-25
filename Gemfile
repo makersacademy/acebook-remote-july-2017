@@ -21,6 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'devise'
+gem 'jquery-rails'
 
 gem 'jquery-rails'
 

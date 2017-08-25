@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     resources :likes
   end
 
+
+
   get 'albums/new'
   root 'albums#new'
   resources :albums
