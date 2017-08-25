@@ -37,7 +37,7 @@ AWS_REGION=<your_aws_region>
 ```bash
 bin/rails server
 ```
-Then start the server at localhost:3000
+This will start the server at localhost:3000
 
 ---
 ## Processes
@@ -73,4 +73,4 @@ Then start the server at localhost:3000
 ### A note on Icomoon and the custom font icon set
 * We followed this tutorial: http://mediatemple.net/blog/tips/creating-implementing-icon-font-tutorial/
 * Importantly, the fonts folder needs to be in Assets, application.css needs to be renamed to application.css.scss and each @font-face src url needs to be called as a font-url. Without these changes, the icons will not render on Heroku.
-* To render icons, simply use <span class="icon-name" id="icon"></span>, where name is the name of the icon (the list will be in application.css.scss)
+* To render icons, simply use `<span class="icon-name" id="icon"></span>`, where name is the name of the icon (the list will be in application.css.scss)
