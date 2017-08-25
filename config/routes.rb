@@ -17,9 +17,14 @@ Rails.application.routes.draw do
 
   get 'albums/new'
   root 'albums#new'
+  
   resources :albums
   resources :groups
+  
   resources :chats do
     resources :messages
   end
+
+  resources :photos
+
 end
